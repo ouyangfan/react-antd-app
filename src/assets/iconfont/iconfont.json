@@ -1,0 +1,121 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1103347",
+      "name": "手机",
+      "font_class": "tel",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "2076258",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e88f",
+      "unicode_decimal": 59535
+    },
+    {
+      "icon_id": "2076291",
+      "name": " 火车票",
+      "font_class": "huochepiao",
+      "unicode": "e89a",
+      "unicode_decimal": 59546
+    },
+    {
+      "icon_id": "2076293",
+      "name": " 酒店",
+      "font_class": "jiudian",
+      "unicode": "e89b",
+      "unicode_decimal": 59547
+    },
+    {
+      "icon_id": "2076297",
+      "name": " 机票",
+      "font_class": "jipiao",
+      "unicode": "e89c",
+      "unicode_decimal": 59548
+    },
+    {
+      "icon_id": "2076300",
+      "name": " 汽车票",
+      "font_class": "qichepiao",
+      "unicode": "e89d",
+      "unicode_decimal": 59549
+    },
+    {
+      "icon_id": "2076353",
+      "name": "门票",
+      "font_class": "menpiao",
+      "unicode": "e8b1",
+      "unicode_decimal": 59569
+    },
+    {
+      "icon_id": "2121726",
+      "name": "旅游",
+      "font_class": "lvyou",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "5207056",
+      "name": "攻略",
+      "font_class": "gonglve",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "5387634",
+      "name": "金融管理",
+      "font_class": "jinrongguanli",
+      "unicode": "eb1c",
+      "unicode_decimal": 60188
+    },
+    {
+      "icon_id": "6920447",
+      "name": "全球购",
+      "font_class": "quanqiugou",
+      "unicode": "e6ee",
+      "unicode_decimal": 59118
+    },
+    {
+      "icon_id": "7127390",
+      "name": "用车",
+      "font_class": "yongche",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11372658",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    },
+    {
+      "icon_id": "11372681",
+      "name": "礼品卡",
+      "font_class": "lipinka",
+      "unicode": "e8b2",
+      "unicode_decimal": 59570
+    },
+    {
+      "icon_id": "18164283",
+      "name": "握手,合作,协作",
+      "font_class": "cooperation",
+      "unicode": "e85d",
+      "unicode_decimal": 59485
+    },
+    {
+      "icon_id": "18298025",
+      "name": "携程商旅",
+      "font_class": "xiechengshanglv",
+      "unicode": "e6fc",
+      "unicode_decimal": 59132
+    }
+  ]
+}
