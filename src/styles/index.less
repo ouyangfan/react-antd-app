@@ -1,9 +1,19 @@
 @import './antd/index.less';
 @import './variable.less';
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .ant-layout-header,
 .ant-layout-content,
-.ant-layout-footer {
+.ant-layout-footer,
+.layout-body {
   padding: 0;
   width: 1180px;
   margin: 0 auto;
@@ -27,6 +37,12 @@
 .mr-20 {
   margin-right: 20px;
 }
+.font-14 {
+  font-size: 14px !important;
+}
+.font-16 {
+  font-size: 16px !important;
+}
 .primary-text {
   color: @text-color;
   font-size: 13px;
@@ -34,4 +50,12 @@
 }
 .text-center {
   text-align: center;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }

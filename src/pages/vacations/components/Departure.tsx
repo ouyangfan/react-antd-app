@@ -32,7 +32,7 @@ const options: Option[] = [
   },
 ]
 
-export const Departure: React.FC = () => {
+const Departure: React.FC = () => {
   const [text, setText] = useState('请选择')
 
   const onChange = (_: string[], selectedOptions: Option[]) => {
@@ -55,3 +55,5 @@ export const Departure: React.FC = () => {
     </>
   )
 }
+
+export default Departure

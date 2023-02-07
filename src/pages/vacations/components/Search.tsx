@@ -19,7 +19,7 @@ const options = [
   { value: '20', label: '一日游' },
   { value: '21', label: '签证' },
 ]
-export const Search: React.FC = () => {
+const Search: React.FC = () => {
   return (
     <>
       <Input.Group compact>
@@ -38,3 +38,5 @@ export const Search: React.FC = () => {
     </>
   )
 }
+
+export default Search

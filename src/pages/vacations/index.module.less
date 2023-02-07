@@ -20,5 +20,93 @@
   }
 }
 
-.destination {
+// 卡片
+.x-card {
+  background: #fff;
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.x-card__item {
+  position: relative;
+  // height: 45px;
+  overflow: hidden;
+  vertical-align: top;
+  zoom: 1;
+  padding: 10px 20px 10px;
+  margin: 0;
+  background: #fff;
+  padding-left: 26px;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #2577e3;
+    left: 16px;
+    top: 19px;
+    position: absolute;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    bottom: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 1px;
+  }
+  &__h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 2px;
+  }
+  p a {
+    float: left;
+    margin-left: 6px;
+    display: inline;
+    color: #333;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 12px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.carousel-img {
+  width: 100%;
+}
+
+.ad-con {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.ad-bottom {
+  margin-top: 8px;
+  a {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.product-wrap {
+  padding-top: 20px;
+  .product-item {
+    display: flex;
+    .product-item__left {
+      margin-right: 20px;
+      & > h2 {
+        line-height: 45px;
+      }
+    }
+    .product-item__right {
+      // width: 80%;
+      width: 950px;
+    }
+  }
 }
