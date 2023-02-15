@@ -3,8 +3,8 @@ import { Button } from 'antd'
 import { HomeOutlined } from '@ant-design/icons'
 import styles from './index.module.less'
 
-const Passenger: React.FC = () => {
-  return <>passenger</>
+const Message: React.FC = () => {
+  return <>Message</>
 }
 
-export default Passenger
+export default Message

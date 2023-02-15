@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Layout } from 'antd'
-import { SiderBarPage } from './components/HomeSiderBar'
 import { HeaderPage } from './components/Header'
 import { FooterPage } from './components/FooterPage'
 import { MineSideBar } from './components/MineSideBar'

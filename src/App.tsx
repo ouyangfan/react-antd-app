@@ -13,7 +13,9 @@ import HomeLayoutPage from "./layout/home";
 import MineLayoutPage from "./layout/mine";
 
 import Vacations from "./pages/vacations";
+import Home from "./pages/my-info/home";
 import Order from "./pages/my-info/order";
+import Message from "./pages/my-info/message";
 import Accountcenter from "./pages/my-info/accountcenter";
 import Einvoice from "./pages/my-info/einvoice";
 import Favorite from "./pages/my-info/favorite";
@@ -22,6 +24,7 @@ import Promocode from "./pages/my-info/promocode";
 import Webwallet from "./pages/my-info/webwallet";
 
 import Login from "./pages/login";
+import NotFound from "./pages/error/not-found";
 
 const PrivateRoute = ({ children }) => {
   const token = useSelector((s) => s.user.token);
@@ -46,10 +49,26 @@ const App: React.FC = () => {
             }
           />
           <Route
+            path='home'
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path='all'
             element={
               <PrivateRoute>
                 <Order />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path='message'
+            element={
+              <PrivateRoute>
+                <Message />
               </PrivateRoute>
             }
           />
@@ -103,6 +122,7 @@ const App: React.FC = () => {
           />
         </Route>
         <Route path="login" element={<Login />}></Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </BrowserRouter>
   );
