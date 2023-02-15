@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cascader, Input, Select, Space, Button, Tabs } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
-import styles from '../index.module.less'
+import styles from './index.module.less'
 
 const { Option } = Select
 

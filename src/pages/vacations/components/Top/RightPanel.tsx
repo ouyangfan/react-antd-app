@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Carousel, Row } from 'antd'
-import styles from '../index.module.less'
+import styles from './index.module.less'
 
 const RightPanel: React.FC = () => {
   return (

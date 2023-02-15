@@ -5,8 +5,8 @@ import styles from './index.module.less'
 
 import bg from '@/assets/login/bg.jpg'
 
-const MyInfo: React.FC = () => {
-  return <>我的订单</>
+const Accountcenter: React.FC = () => {
+  return <>accountcenter</>
 }
 
-export default MyInfo
+export default Accountcenter

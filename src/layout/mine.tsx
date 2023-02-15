@@ -15,7 +15,7 @@ const LayoutPage: React.FC = () => {
   return (
     <Layout>
       <Header>
-        <HeaderPage></HeaderPage>
+        <HeaderPage searchInput={false}></HeaderPage>
       </Header>
       <Layout className="layout-body">
         <Sider style={{ width: 160 }}>

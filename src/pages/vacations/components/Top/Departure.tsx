@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Cascader } from 'antd'
 
-import styles from '../index.module.less'
+import styles from './index.module.less'
 
 interface Option {
   value: string | number

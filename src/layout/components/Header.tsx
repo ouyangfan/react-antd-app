@@ -1,108 +1,112 @@
-import React from 'react'
-import styles from '../index.module.less'
-import { Route, Routes, useNavigate } from 'react-router-dom'
-import { Input, Space, Button, Tooltip, Divider, Dropdown } from 'antd'
-import { UserOutlined, DownOutlined } from '@ant-design/icons'
-import type { MenuProps } from 'antd'
-import { useSelector, useAppDispatch } from '@/redux/hooks'
-import { setUserNull } from '@/redux/user/slice'
+import React from "react";
+import styles from "../index.module.less";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import { Input, Space, Button, Tooltip, Divider, Dropdown } from "antd";
+import { UserOutlined, DownOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { useSelector, useAppDispatch } from "@/redux/hooks";
+import { setUserNull } from "@/redux/user/slice";
 
-const { Search } = Input
+const { Search } = Input;
 
-const usernameItems: MenuProps['items'] = [
+const usernameItems: MenuProps["items"] = [
   {
-    label: '我的携程首页',
-    key: 'home',
+    label: "我的携程首页",
+    key: "home",
   },
   {
-    label: '我的钱包',
-    key: 'wallet',
+    label: "我的钱包",
+    key: "wallet",
   },
   {
-    label: '我的收藏',
-    key: 'collection',
+    label: "我的收藏",
+    key: "collection",
   },
   {
-    type: 'divider',
+    type: "divider",
   },
   {
-    label: '退出登录',
-    key: 'logout',
+    label: "退出登录",
+    key: "logout",
   },
-]
+];
 
-const orderItems: MenuProps['items'] = [
+const orderItems: MenuProps["items"] = [
   {
-    label: '机票 + 相关订单',
-    key: 'plane-ticket',
+    label: "机票 + 相关订单",
+    key: "plane-ticket",
   },
   {
-    label: '酒店订单',
-    key: 'hotel',
+    label: "酒店订单",
+    key: "hotel",
   },
   {
-    label: '旅游订单',
-    key: 'vacations',
+    label: "旅游订单",
+    key: "vacations",
   },
   {
-    label: '全部订单',
-    key: 'all',
+    label: "全部订单",
+    key: "all",
   },
   {
-    label: '火车票订单',
-    key: 'train',
+    label: "火车票订单",
+    key: "train",
   },
   {
-    type: 'divider',
+    type: "divider",
   },
   {
-    label: '手机号查订单',
-    key: 'phone-number',
+    label: "手机号查订单",
+    key: "phone-number",
   },
-]
+];
 
-export const HeaderPage: React.FC = () => {
-  const navigate = useNavigate()
+interface HeaderTypes{
+  searchInput?: boolean
+}
+export const HeaderPage: React.FC = (props: HeaderTypes) => {
+  const navigate = useNavigate();
+  
+  const username = useSelector((s) => s.user.username);
+  const token = useSelector((s) => s.user.token);
+  const dispatch = useAppDispatch();
 
-  const username = useSelector((s) => s.user.username)
-  const token = useSelector((s) => s.user.token)
-  const dispatch = useAppDispatch()
-
-  const onSearch = (value: string) => console.log(value)
+  const onSearch = (value: string) => console.log(value);
   const handleLogin = () => {
-    navigate('/login')
-  }
+    navigate("/login");
+  };
   const handleMenuClick = (e) => {
-    console.log(e.key)
     switch (e.key) {
-      case 'logout': {
-        dispatch(setUserNull())
-        navigate('/login')
-        break
+      case "logout": {
+        dispatch(setUserNull());
+        navigate("/login");
+        break;
       }
       default: {
-        navigate(`/my-info/${e.key}`)
-        break
+        navigate(`/my-info/${e.key}`);
+        break;
       }
     }
-  }
+  };
 
   return (
-    <div className={styles['header-wrap']}>
-      <div className={styles['header-wrap_left']}>
+    <div className={styles["header-wrap"]}>
+      <div className={styles["header-wrap_left"]}>
         <a href="/" className={styles.logo}>
           携程旅行网
         </a>
 
+        {props.searchInput &&
         <Search
           placeholder="input search text"
           onSearch={onSearch}
           enterButton
           className={styles.search}
-        />
+        />}
+        
       </div>
 
-      <div className={styles['header-wrap_right']}>
+      <div className={styles["header-wrap_right"]}>
         {token ? (
           <Dropdown menu={{ items: usernameItems, onClick: handleMenuClick }}>
             <a onClick={(e) => e.preventDefault()} className="primary-text">
@@ -145,5 +149,5 @@ export const HeaderPage: React.FC = () => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -21,7 +21,7 @@ const HomeLayoutPage: React.FC = () => {
       </Sider>
       <Layout>
         <Header>
-          <HeaderPage></HeaderPage>
+          <HeaderPage searchInput={true}></HeaderPage>
         </Header>
         <Content>
           <Outlet></Outlet>
