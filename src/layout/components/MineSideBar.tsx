@@ -6,7 +6,7 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -80,9 +80,8 @@ const items: MenuItem[] = [
 ];
 
 export const MineSideBar: React.FC = () => {
-  const { menu } = useParams<MatchParams>();
   let location = useLocation();
-  const key = location.pathname.slice(location.pathname.lastIndexOf('/') + 1)
+  const key = location.pathname.slice(location.pathname.lastIndexOf("/") + 1);
   let [current, setCurrent] = useState(key);
 
   const navigate = useNavigate();
