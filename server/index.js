@@ -1,25 +1,25 @@
-import express from 'express'
-import bodyParser from 'body-parser'
+import express from "express";
+import bodyParser from "body-parser";
 
-import { accountList } from './data.js'
+import { accountList, orderList } from "./data.js";
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // test
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
-app.post('/api/user/login', (req, res) => {
-  console.log(req.body)
-  const { phone, password } = req.body
+app.post("/api/user/login", (req, res) => {
+  console.log(req.body);
+  const { phone, password } = req.body;
   const result = accountList.find(
-    (item) => item.phone === phone && item.password === password,
-  )
+    (item) => item.phone === phone && item.password === password
+  );
   setTimeout(() => {
     if (result) {
       res.send({
@@ -28,18 +28,30 @@ app.post('/api/user/login', (req, res) => {
           username: result.username,
           token: result.token,
         },
-        message: 'success',
-      })
+        message: "success",
+      });
     } else {
       res.send({
         code: 110,
         data: {},
-        message: '账号或密码错误',
-      })
+        message: "账号或密码错误",
+      });
     }
-  }, 500)
-})
+  }, 500);
+});
+
+app.get("/api/order/list", (req, res) => {
+  setTimeout(() => {
+    res.send({
+      code: 1,
+      data: {
+        orderList,
+      },
+      message: "success",
+    });
+  }, 300);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});

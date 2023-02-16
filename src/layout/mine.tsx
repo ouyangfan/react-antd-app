@@ -20,7 +20,7 @@ const LayoutPage: React.FC = () => {
         <Sider style={{ width: 160 }}>
           <MineSideBar></MineSideBar>
         </Sider>
-        <Content style={{ margin: '0 20px' }}>
+        <Content style={{ margin: '0 0 0 20px' }}>
           <Outlet></Outlet>
         </Content>
       </Layout>

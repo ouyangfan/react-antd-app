@@ -9,11 +9,11 @@ import './styles/index.less'
 import './assets/iconfont/iconfont.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={rootStore.store}>
       <PersistGate persistor={rootStore.persistor}>
         <App />
       </PersistGate>
     </Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
