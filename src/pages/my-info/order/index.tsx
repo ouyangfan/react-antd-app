@@ -19,7 +19,7 @@ const items = [
   {
     label: "未出行",
     key: "noTravel",
-    OrderStatusCode: 'VACATION_NOTravel'
+    OrderStatusCode: 'VACATION_NOTra'
   },
   {
     label: "待支付",
