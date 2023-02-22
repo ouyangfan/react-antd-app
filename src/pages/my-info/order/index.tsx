@@ -3,49 +3,57 @@ import { Button, Alert, Tabs } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import styles from "./index.module.less";
 import http from "@/plugins/axios";
-
-const OrderItem: React.FC = (props) => {
-  console.log(props);
-
-  return <>OrderItem</>;
-};
+import OrderItem from "./OrderItem";
 
 const items = [
   {
     label: "全部订单",
-    key: "all",
-    OrderStatusCode: 'VACATION_ALL'
+    key: "ALL",
+    OrderStatusCode: "VACATION_ALL",
   },
   {
     label: "未出行",
-    key: "noTravel",
-    OrderStatusCode: 'VACATION_NOTra'
+    key: "NOTra",
+    OrderStatusCode: "VACATION_NOTra",
   },
   {
     label: "待支付",
-    key: "toBePaid",
-    OrderStatusCode: 'VACATION_UNCOMMIT'
+    key: "UNCOMMIT",
+    OrderStatusCode: "VACATION_UNCOMMIT",
   },
   {
     label: "待点评",
     key: "toBeCommented",
-    OrderStatusCode: 'VACATION_toBeCommented'
-
+    OrderStatusCode: "VACATION_toBeCommented",
   },
 ];
 
 const Order: React.FC = () => {
   const [orderList, setOrderList] = useState([]);
-
-  const getOrderList = () => {
-    http.get("/api/order/list").then((res: any) => {
-      setOrderList(res.data.orderList);
-    });
-  };
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getOrderList();
   }, []);
+
+  const getOrderList = () => {
+    setLoading(true);
+    http
+      .get("/api/order/list")
+      .then((res: any) => {
+        setOrderList(res.data.orderList);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  const filterOrderList = (OrderStatusCode: string) => {
+    if (OrderStatusCode === "VACATION_ALL") {
+      return orderList;
+    }
+    return orderList.filter(
+      (list: any) => list.OrderStatusCode === OrderStatusCode
+    );
+  };
 
   return (
     <>
@@ -64,9 +72,8 @@ const Order: React.FC = () => {
               ...item,
               children: (
                 <OrderItem
-                  orderList={orderList.filter(
-                    (list: any) => list.OrderStatusCode === "VACATION_UNCOMMIT"
-                  )}
+                  orderList={filterOrderList(item.OrderStatusCode)}
+                  loading={loading}
                 ></OrderItem>
               ),
             };

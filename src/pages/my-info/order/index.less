@@ -1,0 +1,79 @@
+@import "@/styles/variable.less";
+
+.spin-wrap{
+  min-height: 300px;
+  text-align: center;
+}
+.order_list_empty{
+  background-color: #ededed;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Microsoft Yahei;
+}
+
+.orders_list {
+  min-height: 300px;
+  h3 {
+    font-family: Tahoma;
+    font-weight: 400;
+    color: @text-color;
+    padding: 0 10px;
+    height: 34px;
+    background-color: @primary-background-color;
+    line-height: 34px;
+    font-size: 12px;
+  }
+  .item {
+    border: 1px solid #d9d9d9;
+    margin-bottom: 10px;
+
+    .order-items {
+      margin: 10px 0 10px 28px;
+    }
+
+    .order-info {
+      max-width: 720px;
+      float: left;
+      .order-item-title {
+        color: @title-color;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+      .order-item-txt {
+        font-size: 12px;
+        line-height: 16px;
+        color: #333;
+        margin-bottom: 6px
+      }
+    }
+
+    .order-price-group {
+      float: right;
+      text-align: right;
+      margin-right: 12px;
+      .order-price-status{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 4px;
+      }
+      .order-price-status-title{
+        color: rgb(0, 134, 246);
+      }
+      .order-price-num{
+        color: #666;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: right;
+      }
+      .order-blod-price{
+        color: #333;
+        font-size: 18px;
+        font-family: PingFangSC-Semibold;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

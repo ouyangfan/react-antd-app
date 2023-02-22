@@ -4,7 +4,6 @@ import { SearchOutlined } from '@ant-design/icons'
 import styles from './index.module.less'
 
 const { Option } = Select
-
 const options = []
 
 const tabItems = [
