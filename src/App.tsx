@@ -13,10 +13,15 @@ import HomeLayoutPage from "./layout/home";
 import MineLayoutPage from "./layout/mine";
 
 import Vacations from "./pages/vacations";
+<<<<<<< HEAD
 
 import Home from "./pages/my-info/home";
 import Order from "./pages/my-info/order";
 import OrderDetail from "./pages/order-detail";
+=======
+import Home from "./pages/my-info/home";
+import Order from "./pages/my-info/order";
+>>>>>>> 0e392ebf7ef388bfcc1f87e2f9eb1e31fdbce4b5
 import Message from "./pages/my-info/message";
 import Accountcenter from "./pages/my-info/accountcenter";
 import Einvoice from "./pages/my-info/einvoice";
