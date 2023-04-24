@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Layout } from 'antd'
-import { SiderBarPage } from './components/HomeSiderBar'
 import { HeaderPage } from './components/Header'
 import { FooterPage } from './components/FooterPage'
 import { MineSideBar } from './components/MineSideBar'
@@ -15,13 +14,13 @@ const LayoutPage: React.FC = () => {
   return (
     <Layout>
       <Header>
-        <HeaderPage></HeaderPage>
+        <HeaderPage searchInput={false}></HeaderPage>
       </Header>
       <Layout className="layout-body">
         <Sider style={{ width: 160 }}>
           <MineSideBar></MineSideBar>
         </Sider>
-        <Content style={{ margin: '0 20px' }}>
+        <Content style={{ margin: '0 0 0 20px' }}>
           <Outlet></Outlet>
         </Content>
       </Layout>

@@ -28,6 +28,9 @@ h6 {
 .mr-5 {
   margin-right: 5px;
 }
+.ml-5 {
+  margin-left: 5px;
+}
 .ml-20 {
   margin-left: 20px;
 }
@@ -36,6 +39,9 @@ h6 {
 }
 .mr-20 {
   margin-right: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
 }
 .font-14 {
   font-size: 14px !important;
@@ -48,14 +54,40 @@ h6 {
   font-size: 13px;
   line-height: 32px;
 }
+.secondary-text {
+  color: @secondary-text-color;
+}
+
+.text-orange {
+  color: @orange;
+}
 .text-center {
   text-align: center;
 }
-
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
 .clearfix::after {
   content: '';
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
+}
+.cursor-poiner {
+  cursor: pointer;
+}
+
+.spin-wrap {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-bold {
+  font-weight: bold;
 }

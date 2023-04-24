@@ -12,7 +12,8 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/dev/, '')
       },
-    }
+    },
+    port: 8090
   },
   resolve: {
     alias: {
