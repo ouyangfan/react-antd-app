@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 
 import { Spin, Space } from "antd";
@@ -19,16 +18,6 @@ const ListItem: React.FC<ListItemProps> = (props) => {
 
   return (
     <div className="item" onClick={redirectOrderDetail}>
-=======
-import { Spin } from "antd";
-import { msToDate } from "@/utils/format-time";
-import "./index.less";
-
-const ListItem: React.FC = (props: any) => {
-  const { order } = props;
-  return (
-    <div className="item">
->>>>>>> 0e392ebf7ef388bfcc1f87e2f9eb1e31fdbce4b5
       <h3>
         <span className="mr-20">
           订单号： <span className="card-order-id">{order.OrderID}</span>
@@ -76,7 +65,6 @@ const ListItem: React.FC = (props: any) => {
 };
 
 const OrderListEmpty: React.FC = () => {
-<<<<<<< HEAD
   return <div className="order_list_empty">暂时没有相关订单</div>;
 };
 
@@ -86,39 +74,15 @@ const OrderItem: React.FC = (props: any) => {
     <ListItem key={order.OrderID} order={order} />
   ));
 
-=======
-  return (
-    <div className='order_list_empty'>
-      暂时没有相关订单
-    </div>
-  )
-};
-
-const OrderItem: React.FC = (props: any) => {
-  console.log(props);
-  
->>>>>>> 0e392ebf7ef388bfcc1f87e2f9eb1e31fdbce4b5
   return (
     <>
       {props.loading ? (
         <div className="spin-wrap">
-<<<<<<< HEAD
           <Spin size="large" />
         </div>
       ) : (
         <div className="orders_list">
           {props.orderList.length ? listItems : <OrderListEmpty />}
-=======
-          <Spin />
-        </div>
-      ) : (
-        <div className="orders_list">
-          {props.orderList.length
-            ? props.orderList.map((order: any) => {
-                return <ListItem key={order.OrderID} order={order} />;
-              })
-            : <OrderListEmpty/>}
->>>>>>> 0e392ebf7ef388bfcc1f87e2f9eb1e31fdbce4b5
         </div>
       )}
     </>
