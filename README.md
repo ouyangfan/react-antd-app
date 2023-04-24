@@ -1,5 +1,9 @@
 ### trip-app
 仿携程网页版。技术栈 react + antd + toolkit + redux-persist
+express 模拟 api。文件在 server 目录。启动 api
+```
+node ./index
+```
 
 ### 登录页
 ```
